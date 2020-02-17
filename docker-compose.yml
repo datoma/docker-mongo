@@ -4,9 +4,9 @@ services:
     image: 'mongo'
     container_name: 'mongo-sample'
     environment:
-      - MONGO_INITDB_DATABASE=sample
-      - MONGO_INITDB_ROOT-USERNAME=admin
-      - MONGO_INITDB_PASSWORD=secret01
+      - MONGO_INITDB_DATABASE=${MONGODB_DATABASE_NAME}
+      - MONGO_INITDB_ROOT-USERNAME=${MONGODB_ROOT_USER}
+      - MONGO_INITDB_PASSWORD=${MONGODB_ROOT_PWD}
     volumes:
       - ./scripts/init-mongo.js:/docker-entrypoint-initdb.d/init-mongo.js:ro
       - .mongo-volume:/data/db
