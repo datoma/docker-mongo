@@ -1,4 +1,4 @@
-# mongo_docker
+# docker-mongo
 very easy docker-compose sample with mongo
 
 ## start
